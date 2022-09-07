@@ -4,7 +4,7 @@
     </div>
   </footer>
 
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">Ichad</a></div>
+  <div class="w3-black w3-center w3-padding-24">Created by <a href="https://www.linkedin.com/in/muhammad-irsyad-fadhil-947412214/" title="W3.CSS" target="_blank" class="w3-hover-opacity">Ichad</a></div>
 
   <!-- End page content -->
 </div>

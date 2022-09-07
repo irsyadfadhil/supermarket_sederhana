@@ -2,26 +2,17 @@
 
 @section('main')
   <!-- Product grid -->
-
-  <div class="w3-row w3-grayscale" style="text-align: center">
-    <p>SELAMAT DATANG </p>
-  </div>
-
   <div class="w3-row w3-grayscale">
     <table>
         <tr>
-            <th>No</th>
             <th>Nama Barang</th>
             <th>Harga</th>
-            <th>Stok</th>
-            <th>Gambar</th>
-            <th>Kode</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
             <th>Action</th>
         </tr>
-        @foreach($produk as $key => $value)
+        @foreach($shoppingcart as $key => $value)
             <tr>
-                <td></td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>

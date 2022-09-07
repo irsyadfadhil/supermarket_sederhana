@@ -49,25 +49,9 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><b>LOGO</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="#" class="w3-bar-item w3-button">Shirts</a>
-    <a href="#" class="w3-bar-item w3-button">Dresses</a>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Jeans <i class="fa fa-caret-down"></i>
-    </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-      <a href="#" class="w3-bar-item w3-button">Relaxed</a>
-      <a href="#" class="w3-bar-item w3-button">Bootcut</a>
-      <a href="#" class="w3-bar-item w3-button">Straight</a>
-    </div>
-    <a href="#" class="w3-bar-item w3-button">Jackets</a>
-    <a href="#" class="w3-bar-item w3-button">Gymwear</a>
-    <a href="#" class="w3-bar-item w3-button">Blazers</a>
-    <a href="#" class="w3-bar-item w3-button">Shoes</a>
+    <a href="{{ url('/') }}" class="w3-bar-item w3-button">Home</a>
+    <a href="{{ url('produk') }}" class="w3-bar-item w3-button">Produk</a>
   </div>
-  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
-  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>
 
 <!-- Top menu on small screens -->
@@ -89,8 +73,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <header class="w3-container w3-xlarge">
     <p class="w3-left">Supermarket Sederhana</p>
     <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right"></i>
-      <i class="fa fa-search"></i>
+    <a href="{{ url('shopping_cart') }}" class="w3-bar-item w3-button"><i class="fa fa-shopping-cart w3-margin-right"></i>Shopping Cart</a>
     </p>
   </header>
 
@@ -100,8 +83,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
       <h1 class="w3-jumbo w3-hide-small">Produk Baru</h1>
       <h1 class="w3-hide-large w3-hide-medium">Produk Baru</h1>
-      <h1 class="w3-hide-small">COLLECTION 2016</h1>
-      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">Beli Sekarang</a></p>
+      <h1 class="w3-hide-small">Koleksi Baru</h1>
+      <p><a href="{{ url('shopping_cart') }}" class="w3-button w3-black w3-padding-large w3-large">Beli Sekarang</a></p>
     </div>
   </div>
 

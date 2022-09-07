@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\produk;
+use App\Http\Controllers\shoppingcart;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,6 @@ use App\Http\Controllers\produk;
 
 Route::resource('/', Home::class);
 Route::resource('produk', produk::class);
+Route::resource('shopping_cart', shoppingcart::class);
 
 
