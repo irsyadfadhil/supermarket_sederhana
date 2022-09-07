@@ -19,6 +19,7 @@ class Produk extends Migration
             $table->string('nama_barang')->nullable();
             $table->integer('harga')->nullable();
             $table->integer('stok')->nullable();
+            $table->integer('stok_asli')->nullable();
             $table->string('gambar')->nullable();
             $table->string('kode')->nullable();
             $table->timestamps();

@@ -19,15 +19,28 @@ class Home extends Controller
     public function store(Request $request)
     {
         $data_produk = Produk::where('kode', $request->kode)->first();
-        $sub_total = $data_produk->harga * 1;
+        $cek_produk_di_cart = ShoppinCart::where('id_produk', $data_produk->id_produk)->first();
+        if (empty($cek_produk_di_cart)) {
+            $sub_total = $data_produk->harga * 1;
+            $jumlah_stok = $data_produk->stok - 1;
 
-        $buat_shopping = ShoppinCart::create([
-            'id_produk' => $data_produk->id_produk,
-            'harga' => $data_produk->harga,
-            'qty' => 1,
-            'subtotal' => $sub_total,
+            $requestData['stok'] = $jumlah_stok;
+            $data_produk->update($requestData);
 
-        ]);
+            $buat_shopping = ShoppinCart::create([
+                'id_produk' => $data_produk->id_produk,
+                'harga' => $data_produk->harga,
+                'qty' => 1,
+                'subtotal' => $sub_total,
+
+            ]);
+        } else {
+            // return redirect('/shopping_cart')->with('status', 'Data Created!');
+            return redirect('/shopping_cart')->with('success', 'Sudah Ada Di Keranjang');
+        }
+
+
+
 
         return redirect('/shopping_cart')->with('status', 'Data Created!');
     }

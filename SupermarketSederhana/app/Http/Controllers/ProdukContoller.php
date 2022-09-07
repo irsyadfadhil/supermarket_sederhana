@@ -37,6 +37,7 @@ class ProdukContoller extends Controller
             'nama_barang' => $request->nama_barang,
             'harga' => $request->harga,
             'stok' => $request->stok,
+            'stok_asli' => $request->stok,
             'gambar' => $nama_file,
             'kode' => $kode_produk,
 

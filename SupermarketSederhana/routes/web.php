@@ -24,6 +24,6 @@ use App\Http\Controllers\shoppingcart;
 
 Route::resource('/', Home::class)->parameters(['home' => 'home']);
 Route::resource('produk', ProdukContoller::class)->parameters(['produk' => 'produk']);
-Route::resource('shopping_cart', shoppingcart::class);
+Route::resource('shopping_cart', shoppingcart::class)->parameters(['shopping_cart' => 'shopping_cart']);
 
 
