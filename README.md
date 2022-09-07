@@ -16,19 +16,9 @@ Halaman Cart http://localhost::8000/shopping_cart
 ```
 $ composer install
 copy file .env.example jadi .env
+import file supermarket_sederhana_muhammadirsyadfadhil.sql
 ubah "DB_DATABASE=laravel" jadi "DB_DATABASE=supermarket_sederhana"
 $ php artisan key:generate
-
-```
-
-# Untuk Tes CRUD Gunakan Ini dulu
-```
 $ php artisan migrate:fresh --seed
-
-```
-
-# Untuk Tes Olah Data
-```
-import file supermarket_sederhana_muhammadirsyadfadhil.sql
 
 ```
