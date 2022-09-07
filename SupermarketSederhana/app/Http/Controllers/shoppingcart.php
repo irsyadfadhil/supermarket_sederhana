@@ -14,7 +14,7 @@ class shoppingcart extends Controller
      */
     public function index()
     {
-        $shoppingcart = ShoppinCart::all();
+        $shoppingcart = ShoppinCart::with('produk')->get();
         return view('cart', compact('shoppingcart'));
     }
 

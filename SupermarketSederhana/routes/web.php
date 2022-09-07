@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
-use App\Http\Controllers\produk;
+use App\Http\Controllers\ProdukContoller;
 use App\Http\Controllers\shoppingcart;
 
 /*
@@ -22,8 +22,8 @@ use App\Http\Controllers\shoppingcart;
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::resource('/', Home::class);
-Route::resource('produk', produk::class);
+Route::resource('/', Home::class)->parameters(['home' => 'home']);
+Route::resource('produk', ProdukContoller::class)->parameters(['produk' => 'produk']);
 Route::resource('shopping_cart', shoppingcart::class);
 
 

@@ -15,6 +15,7 @@ class Produk extends Migration
     {
         Schema::create('produk', function (Blueprint $table) {
             $table->id('id_produk');
+            $table->integer('nomor_urut')->nullable();
             $table->string('nama_barang')->nullable();
             $table->integer('harga')->nullable();
             $table->integer('stok')->nullable();

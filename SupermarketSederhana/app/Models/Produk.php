@@ -11,14 +11,12 @@ class Produk extends Model
     protected $table = 'produk';
     protected $primaryKey = 'id_produk';
     protected $fillable = [
+    'nomor_urut',
     'nama_barang',
     'harga',
     'stok',
     'gambar',
-    'kode'];
+    'kode',
+    'gambar',];
 
-    // public function product()
-    // {
-    //     return $this->belongsTo(product::class, 'product_id','id');
-    // }
 }
